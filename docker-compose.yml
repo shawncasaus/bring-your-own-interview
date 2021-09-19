@@ -9,6 +9,7 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: test123
       MYSQL_DATABASE: definitions
+      MYSQL_TCP_PORT: 3305
     volumes:
       - ./database:/docker-entrypoint-initdb.d
     healthcheck:
