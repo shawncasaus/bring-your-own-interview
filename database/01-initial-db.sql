@@ -2,6 +2,7 @@ use definitions;
 
 CREATE TABLE IF NOT EXISTS `dashboards` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` VARCHAR(255) NOT NULL DEFAULT '',
   `createdAt` TIMESTAMP NOT NULL DEFAULT NOW(),
   `updatedAt` TIMESTAMP NOT NULL DEFAULT NOW() ON UPDATE NOW(),
   PRIMARY KEY (`id`)
