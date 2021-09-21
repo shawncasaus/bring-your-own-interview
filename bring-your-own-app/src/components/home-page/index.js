@@ -1,12 +1,13 @@
 import React from 'react';
 import HomePageContext from './home-page-context';
+import DashboardsList from './dashboards-list';
 
 const HomePage = () => {
 
     return (
         <HomePageContext>
             <div className="home-page">    
-                <h1>Welcome to Shawn's Boiler Plate React APP!</h1>        
+                <DashboardsList />       
             </div>
         </HomePageContext>
     )

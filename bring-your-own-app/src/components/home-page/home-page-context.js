@@ -18,7 +18,6 @@ function HomePageProvider({
   }
 
   HomePageProvider.defaultProps = {
-    url: '',
   }
 
   HomePageProvider.propTypes = {
