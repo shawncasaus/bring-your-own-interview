@@ -54,3 +54,31 @@ scripts will be run automatically.
 To apply any script changes when the database is already running you will need to stop the running database container
 and destroy it. Running `docker-compose down` will stop the environment and destroy the containers for you, the next
 time you bring the environment up the containers will be created again.
+
+### Notes
+
+* Completed the task to specifications, however some things needed to be changed in the Docker and .sql file to have things running properly. 
+* In the SQL file I added a variable called titles to the query. 
+* In the docker file a few changes needed to be made to accommodate my m1 mac's hardware as well as changing the port number from 3306 to 3305.
+* Before running Project:
+*   npm install inside both build-your-own-api and build-your-own-app folders
+*   Use the run-docker script in api package.json or use: "docker-compose up --force-recreate"
+*   Ensure Docker is running the mysql container without error
+
+################NOTES ON API################
+* To run the API use the dev or start script in api package.json
+* The DB has to be filled via postman or directly into MySql Workbench prior to getting data from the front end. 
+* Ideally this would involve an input form, but that is not in the requirements for this project.
+* The endpoints for the backend are as follows:
+*   Get all dashboards: "/api/dashboards" 
+*   Get a single dashboard by title: "/api/get-dashboard/:title"
+*   Add mutiple dashboards at a time with the same title: "/api/add-new-dashboards/:num/:title"
+*   Add a single dashboard: "/api/add-new-dashboard/:title"
+
+################NOTES ON APP################
+* To run the APP, make sure the API is running properly use the start script in api package.json
+* App will be running on localhost port 3000
+* The App is self explanatory, but a quick run through of it is that it gets all dashboards from the db and displays them in a bootstrap table.
+* I also built out pagination. I know this was not in the requirements, but I thought it to be useful when viewing larger sets of data from the DB.
+
+That should be mostly it, thank you for the opportunity to complete this challenge!
