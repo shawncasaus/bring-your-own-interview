@@ -60,12 +60,13 @@ time you bring the environment up the containers will be created again.
 * Completed the task to specifications, however some things needed to be changed in the Docker and .sql file to have things running properly. 
 * In the SQL file I added a variable called titles to the query. 
 * In the docker file a few changes needed to be made to accommodate my m1 mac's hardware as well as changing the port number from 3306 to 3305.
-* Before running Project:
+
+#### Before running Project:
 *   npm install inside both build-your-own-api and build-your-own-app folders
 *   Use the run-docker script in api package.json or use: "docker-compose up --force-recreate"
 *   Ensure Docker is running the mysql container without error
 
-################NOTES ON API################
+#### NOTES ON API
 * To run the API use the dev or start script in api package.json
 * The DB has to be filled via postman or directly into MySql Workbench prior to getting data from the front end. 
 * Ideally this would involve an input form, but that is not in the requirements for this project.
@@ -75,7 +76,7 @@ time you bring the environment up the containers will be created again.
 *   Add mutiple dashboards at a time with the same title: "/api/add-new-dashboards/:num/:title"
 *   Add a single dashboard: "/api/add-new-dashboard/:title"
 
-################NOTES ON APP################
+#### NOTES ON APP
 * To run the APP, make sure the API is running properly use the start script in api package.json
 * App will be running on localhost port 3000
 * The App is self explanatory, but a quick run through of it is that it gets all dashboards from the db and displays them in a bootstrap table.
