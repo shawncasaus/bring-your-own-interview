@@ -55,8 +55,6 @@ const DashboardsTable = (definitions) => {
                 if (curPag === pagNum) {
                     const curLow = length - (length % (PAG_SIZE));
                     const curHigh = length;
-                    console.log('curLow', curLow);
-                    console.log('curHigh', curHigh);
                     for (var i = curLow; i < curHigh; i++) {
                         paginatedArray.push(list[i]);
                     }
