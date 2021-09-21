@@ -30,7 +30,7 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 //gets dashboards from mysql db
-app.get('/api/get-dashboards', GetDashboards, (req, res, next) => {
+app.get('/api/dashboards', GetDashboards, (req, res, next) => {
     let query = db.query(res.locals.sql, (err, results) => {
         if(err) {
             res.status(500);
