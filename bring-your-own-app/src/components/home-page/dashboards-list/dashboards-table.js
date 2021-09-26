@@ -31,7 +31,7 @@ const DashboardsTable = (definitions) => {
 
         for (let number = 1; number <= pagNum; number++) {
             items.push(
-                <Pagination.Item key={number} active={number === active} onClick={() => {setCurPag(number)}}>
+                <Pagination.Item key={number} className={(number === active) ? 'activePagination': ''} active={number === active} onClick={() => {setCurPag(number)}}>
                     {number}
                 </Pagination.Item>,
             );

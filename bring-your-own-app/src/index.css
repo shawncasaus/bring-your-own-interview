@@ -51,6 +51,10 @@ a:hover {
   font-size: 14px;
 }
 
+.activePagination span {
+  background-color: #000000 !important;
+}
+
 @media screen and (max-width: 640px) {
   .url-form {
     width: 75%;
