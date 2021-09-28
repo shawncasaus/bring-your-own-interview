@@ -1,14 +1,18 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 import HomePage from './home-page/index';
 import NavBar from './nav-bar/index';
-import Footer from './footer/index';
 
 const Components = () => {
     return (
-        <div>
-            <NavBar />
-            <HomePage />
-            <Footer />
+        <div className="page-content" >
+            <Router>
+                <NavBar />
+                <Redirect push from="/" to="/home" />
+                    <Switch>
+                        <Route path='/home' component={HomePage} />
+                    </Switch>
+            </Router>
         </div>
     );
 }
